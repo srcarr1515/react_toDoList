@@ -1,0 +1,24 @@
+.btn {
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 8px;
+}
+
+.btn-primary {
+    color: rgb(114, 136, 170);
+    border-color: rgb(64, 87, 94);
+    background-color: transparent;
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    border: 1px solid rgb(112, 211, 229);
+}
+
+input:focus {
+ border: 2px solid rgb(112, 211, 229) !important;
+}
