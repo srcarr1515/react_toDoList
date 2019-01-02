@@ -4,18 +4,19 @@ import './ToDoItem.css'
 class ToDoItem extends React.Component {
     constructor(props){
         super(props)
-        this.state = { todoText: ""}
+        this.state = { todoText: "", removeMe: null}
     }
 
     componentDidMount(){
         this.setState({
-            todoText: this.props.todoText
+            todoText: this.props.todoText,
+            removeMe: this.props.removeMe
         })
     }
 
     render () {
         return(
-            <div className="ui segment"><div className="item"><p>{this.state.todoText}</p><div className="ui right floated button td-remove"><i className="trash icon"></i></div></div></div>
+            <div className="ui segment"><div className="item"><p>{this.state.todoText}</p><div className="ui right floated button td-remove" onClick={this.props.removeMe}><i className="trash icon"></i></div></div></div>
         );
     }
 }
